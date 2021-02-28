@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import "package:izaan_eshop/screens/Home/home.dart";
+import "package:izaan_eshop/screens/home/home.dart";
+import "package:izaan_eshop/screens/welcome/welcome.dart";
 
 void main() {
   runApp(MyApp());
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Izaan Eshop",
-      routes: {"/": (context) => Home()},
+      routes: {"/": (context) => Welcome(), "/home": (context) => Home()},
     );
   }
 }
