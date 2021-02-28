@@ -4,8 +4,9 @@ class Button extends StatefulWidget {
   final String title;
   final Color textColor;
   final Color color;
+  final Function onPressed;
 
-  Button({this.title, this.textColor, this.color});
+  Button({this.title, this.textColor, this.color, this.onPressed});
 
   @override
   _ButtonState createState() => _ButtonState();
@@ -24,9 +25,7 @@ class _ButtonState extends State<Button> {
         widget.title,
         style: TextStyle(fontSize: 16),
       ),
-      onPressed: () {
-        print("asd");
-      },
+      onPressed: widget.onPressed,
     );
   }
 }

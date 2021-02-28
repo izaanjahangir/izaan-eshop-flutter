@@ -8,6 +8,7 @@ class Welcome extends StatelessWidget {
       body: SafeArea(
           child: SizedBox.expand(
         child: Container(
+          color: Colors.white,
           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
           child: Column(
             children: [
@@ -24,6 +25,9 @@ class Welcome extends StatelessWidget {
               ),
               Button(
                 title: "Log in",
+                onPressed: () {
+                  Navigator.pushNamed(context, "/login");
+                },
                 color: Colors.black87,
                 textColor: Colors.white,
               ),
@@ -33,6 +37,7 @@ class Welcome extends StatelessWidget {
               Button(
                 title: "Sign up",
                 color: Colors.transparent,
+                onPressed: () {},
                 textColor: Colors.black,
               ),
             ],
