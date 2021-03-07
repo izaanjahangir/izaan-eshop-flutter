@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import "package:izaan_eshop/components/category_box/category_box.dart";
 import "package:izaan_eshop/screens/home/section_row.dart";
+import "package:izaan_eshop/screens/home/item.dart";
 
 class Home extends StatelessWidget {
   @override
@@ -19,7 +20,9 @@ class Home extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
               child: Column(
                 children: [
-                  SectionRow(),
+                  SectionRow(
+                    title: "Categories",
+                  ),
                   Container(
                     height: height * 0.09,
                     child: ListView(
@@ -54,6 +57,32 @@ class Home extends StatelessWidget {
                           imagePath: "./assets/images/accessories.png",
                           backgroundColor: Colors.cyan[300],
                         ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  SectionRow(
+                    title: "Featured",
+                  ),
+                  Container(
+                    height: height * 0.3,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        Item(
+                          itemName: "Macbook pro",
+                        ),
+                        Item(
+                          itemName: "Macbook pro with 8GB ram and 256GB of SSD",
+                        ),
+                        Item(
+                          itemName: "Macbook pro",
+                        ),
+                        Item(
+                          itemName: "Macbook pro",
+                        )
                       ],
                     ),
                   ),

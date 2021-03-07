@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import "package:izaan_eshop/components/text_button/text_button.dart" as TB;
 
 class SectionRow extends StatelessWidget {
+  final String title;
+
+  SectionRow({this.title});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -11,7 +15,7 @@ class SectionRow extends StatelessWidget {
         children: [
           Expanded(
             child: Text(
-              "Title",
+              title,
               style: TextStyle(fontSize: 20),
             ),
           ),
