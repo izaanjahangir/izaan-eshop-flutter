@@ -72,15 +72,19 @@ class Home extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       children: [
                         Item(
+                          onTap: () {},
                           itemName: "Macbook pro",
                         ),
                         Item(
+                          onTap: () {},
                           itemName: "Macbook pro with 8GB ram and 256GB of SSD",
                         ),
                         Item(
+                          onTap: () {},
                           itemName: "Macbook pro",
                         ),
                         Item(
+                          onTap: () {},
                           itemName: "Macbook pro",
                         )
                       ],
