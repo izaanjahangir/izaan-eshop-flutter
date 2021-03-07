@@ -12,8 +12,8 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     final _formKey = GlobalKey<FormState>();
 
-    String email = "";
-    String password = "";
+    TextEditingController emailController = TextEditingController();
+    TextEditingController passwordController = TextEditingController();
 
     return Scaffold(
       appBar: AppBar(
@@ -42,11 +42,7 @@ class _LoginState extends State<Login> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     TextFormField(
-                      onChanged: (el) {
-                        // setState(() {
-                        //   email = el;
-                        // });
-                      },
+                      controller: emailController,
                       decoration: const InputDecoration(
                         hintText: 'Enter your email',
                       ),
@@ -59,10 +55,6 @@ class _LoginState extends State<Login> {
                           return 'Please enter a valid email';
                         }
 
-                        // setState(() {
-                        //   email = value;
-                        // });
-
                         return null;
                       },
                     ),
@@ -70,7 +62,7 @@ class _LoginState extends State<Login> {
                       height: 10,
                     ),
                     TextFormField(
-                      onChanged: (el) {},
+                      controller: passwordController,
                       decoration: const InputDecoration(
                         hintText: 'Enter your password',
                       ),
@@ -86,10 +78,6 @@ class _LoginState extends State<Login> {
                           return passwordError;
                         }
 
-                        // setState(() {
-                        //   password = value;
-                        // });
-
                         return null;
                       },
                     ),
@@ -101,9 +89,10 @@ class _LoginState extends State<Login> {
                         textColor: Colors.white,
                         title: "Login",
                         onPressed: () {
-                          if (_formKey.currentState.validate()) {
-                            Navigator.pushNamed(context, "/home");
-                          }
+                          // if (_formKey.currentState.validate()) {
+                          //   Navigator.pushNamed(context, "/home");
+                          // }
+                          Navigator.pushNamed(context, "/home");
                         })
                   ],
                 ),
