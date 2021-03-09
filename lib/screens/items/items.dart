@@ -27,30 +27,9 @@ class Items extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                Wrap(
-                  spacing: width * 0.03, // gap between adjacent chips
-                  runSpacing: 20, // gap between lines
-                  children: <Widget>[
-                    Item(
-                      onTap: () {},
-                      itemName: "Macbook pro",
-                    ),
-                    Item(
-                      onTap: () {},
-                      itemName: "Macbook pro",
-                    ),
-                    Item(
-                      onTap: () {},
-                      itemName: "Macbook pro",
-                    ),
-                    Item(
-                      onTap: () {},
-                      itemName: "Macbook pro",
-                    ),
-                    Item(
-                      onTap: () {},
-                      itemName: "Macbook pro",
-                    ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
                     Item(
                       onTap: () {},
                       itemName: "Macbook pro",
@@ -60,7 +39,55 @@ class Items extends StatelessWidget {
                       itemName: "Macbook pro",
                     ),
                   ],
-                )
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Item(
+                      onTap: () {},
+                      itemName: "Macbook pro",
+                    ),
+                    Item(
+                      onTap: () {},
+                      itemName: "Macbook pro",
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Item(
+                      onTap: () {},
+                      itemName: "Macbook pro",
+                    ),
+                    Item(
+                      onTap: () {},
+                      itemName: "Macbook pro",
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Item(
+                      onTap: () {},
+                      itemName: "Macbook pro",
+                    ),
+                    Item(
+                      onTap: () {},
+                      itemName: "Macbook pro",
+                    ),
+                  ],
+                ),
               ],
             )),
       )),
