@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import "package:izaan_eshop/screens/home/home.dart";
 import "package:izaan_eshop/screens/welcome/welcome.dart";
 import "package:izaan_eshop/screens/login/login.dart";
+import "package:izaan_eshop/screens/items/items.dart";
 
 void main() {
   runApp(MyApp());
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => Welcome(),
         "/home": (context) => Home(),
-        "/login": (context) => Login()
+        "/login": (context) => Login(),
+        "/items": (context) => Items()
       },
     );
   }

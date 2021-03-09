@@ -27,6 +27,10 @@ class Home extends StatelessWidget {
                 ),
                 SectionRow(
                   title: "Featured",
+                  onTitlePress: () {
+                    Navigator.pushNamed(context, "/items",
+                        arguments: {"title": "Featured"});
+                  },
                 ),
                 HomeItemSlider(),
                 SizedBox(
@@ -34,6 +38,10 @@ class Home extends StatelessWidget {
                 ),
                 SectionRow(
                   title: "Best Selling",
+                  onTitlePress: () {
+                    Navigator.pushNamed(context, "/items",
+                        arguments: {"title": "Best Selling"});
+                  },
                 ),
                 HomeItemSlider()
               ],

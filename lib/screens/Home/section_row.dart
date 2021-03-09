@@ -3,8 +3,9 @@ import "package:izaan_eshop/components/text_button/text_button.dart" as TB;
 
 class SectionRow extends StatelessWidget {
   final String title;
+  final Function onTitlePress;
 
-  SectionRow({this.title});
+  SectionRow({this.title, this.onTitlePress});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class SectionRow extends StatelessWidget {
           ),
           TB.TextButton(
             label: "See all",
-            onTab: () {},
+            onTab: onTitlePress,
           )
         ],
       ),
