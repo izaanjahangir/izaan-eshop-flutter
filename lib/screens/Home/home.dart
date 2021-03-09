@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import "package:izaan_eshop/components/category_box/category_box.dart";
 import "package:izaan_eshop/screens/home/section_row.dart";
-import "package:izaan_eshop/screens/home/item.dart";
+import "package:izaan_eshop/screens/home/home_item_slider.dart";
+import "package:izaan_eshop/screens/home/home_category_slider.dart";
 
 class Home extends StatelessWidget {
   @override
@@ -23,73 +23,14 @@ class Home extends StatelessWidget {
                   SectionRow(
                     title: "Categories",
                   ),
-                  Container(
-                    height: height * 0.09,
-                    child: ListView(
-                      scrollDirection: Axis.horizontal,
-                      children: [
-                        CategoryBox(
-                          categoryName: "Man",
-                          imagePath: "./assets/images/boy.png",
-                          backgroundColor: Colors.blue[300],
-                        ),
-                        SizedBox(
-                          width: width * 0.03,
-                        ),
-                        CategoryBox(
-                          categoryName: "Women",
-                          imagePath: "./assets/images/girl.png",
-                          backgroundColor: Colors.red[300],
-                        ),
-                        SizedBox(
-                          width: width * 0.03,
-                        ),
-                        CategoryBox(
-                          categoryName: "Kids",
-                          imagePath: "./assets/images/kid.png",
-                          backgroundColor: Colors.green[300],
-                        ),
-                        SizedBox(
-                          width: width * 0.03,
-                        ),
-                        CategoryBox(
-                          categoryName: "Others",
-                          imagePath: "./assets/images/accessories.png",
-                          backgroundColor: Colors.cyan[300],
-                        ),
-                      ],
-                    ),
-                  ),
+                  HomeCategorySlider(),
                   SizedBox(
                     height: 30,
                   ),
                   SectionRow(
                     title: "Featured",
                   ),
-                  Container(
-                    height: height * 0.3,
-                    child: ListView(
-                      scrollDirection: Axis.horizontal,
-                      children: [
-                        Item(
-                          onTap: () {},
-                          itemName: "Macbook pro",
-                        ),
-                        Item(
-                          onTap: () {},
-                          itemName: "Macbook pro with 8GB ram and 256GB of SSD",
-                        ),
-                        Item(
-                          onTap: () {},
-                          itemName: "Macbook pro",
-                        ),
-                        Item(
-                          onTap: () {},
-                          itemName: "Macbook pro",
-                        )
-                      ],
-                    ),
-                  ),
+                  HomeItemSlider()
                 ],
               ))),
     );
