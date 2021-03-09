@@ -5,7 +5,6 @@ class Items extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Map args = ModalRoute.of(context).settings.arguments;
-    double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
       appBar: AppBar(
@@ -31,27 +30,15 @@ class Items extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Item(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, "/item-details");
+                      },
                       itemName: "Macbook pro",
                     ),
                     Item(
-                      onTap: () {},
-                      itemName: "Macbook pro",
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Item(
-                      onTap: () {},
-                      itemName: "Macbook pro",
-                    ),
-                    Item(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, "/item-details");
+                      },
                       itemName: "Macbook pro",
                     ),
                   ],
@@ -63,11 +50,15 @@ class Items extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Item(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, "/item-details");
+                      },
                       itemName: "Macbook pro",
                     ),
                     Item(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, "/item-details");
+                      },
                       itemName: "Macbook pro",
                     ),
                   ],
@@ -79,11 +70,35 @@ class Items extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Item(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, "/item-details");
+                      },
                       itemName: "Macbook pro",
                     ),
                     Item(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, "/item-details");
+                      },
+                      itemName: "Macbook pro",
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Item(
+                      onTap: () {
+                        Navigator.pushNamed(context, "/item-details");
+                      },
+                      itemName: "Macbook pro",
+                    ),
+                    Item(
+                      onTap: () {
+                        Navigator.pushNamed(context, "/item-details");
+                      },
                       itemName: "Macbook pro",
                     ),
                   ],

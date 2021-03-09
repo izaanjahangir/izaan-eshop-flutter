@@ -12,19 +12,27 @@ class HomeItemSlider extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         children: [
           Item(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, "/item-details");
+            },
             itemName: "Macbook pro",
           ),
           Item(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, "/item-details");
+            },
             itemName: "Macbook pro with 8GB ram and 256GB of SSD",
           ),
           Item(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, "/item-details");
+            },
             itemName: "Macbook pro",
           ),
           Item(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, "/item-details");
+            },
             itemName: "Macbook pro",
           )
         ],
