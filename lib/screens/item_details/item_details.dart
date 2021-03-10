@@ -51,7 +51,7 @@ class ItemDetails extends StatelessWidget {
                   textColor: Colors.white,
                   title: "Add to cart",
                   onPressed: () {
-                    Navigator.pushNamed(context, "/home");
+                    Navigator.pushNamed(context, "/cart");
                   }),
             )
           ],
