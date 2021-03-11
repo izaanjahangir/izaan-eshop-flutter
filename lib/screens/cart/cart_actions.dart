@@ -27,9 +27,9 @@ class CartActionLabel extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
 
     return Container(
-        color: Colors.grey[300],
+        color: Colors.grey[200],
         width: width * 0.08,
-        height: width * 0.06,
+        height: width * 0.08,
         child: Center(
             child: Text(
           label,
@@ -50,10 +50,10 @@ class CartActionButton extends StatelessWidget {
     return InkWell(
         onTap: () {},
         child: Ink(
-          color: Colors.grey[300],
+          color: Colors.grey[200],
           child: Container(
               width: width * 0.08,
-              height: width * 0.06,
+              height: width * 0.08,
               child: Center(
                 child: Image(
                   height: width * 0.03,
