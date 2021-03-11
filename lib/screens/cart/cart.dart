@@ -35,6 +35,11 @@ class Cart extends StatelessWidget {
                           scrollDirection: Axis.vertical,
                           children: [
                             CartItem(),
+                            CartItem(),
+                            CartItem(),
+                            CartItem(),
+                            CartItem(),
+                            CartItem(),
                           ],
                         ),
                       )
