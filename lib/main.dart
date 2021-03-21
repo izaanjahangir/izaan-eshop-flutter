@@ -5,6 +5,7 @@ import "package:izaan_eshop/screens/login/login.dart";
 import "package:izaan_eshop/screens/items/items.dart";
 import "package:izaan_eshop/screens/item_details/item_details.dart";
 import "package:izaan_eshop/screens/cart/cart.dart";
+import "package:izaan_eshop/screens/payment/payment.dart";
 
 void main() {
   runApp(MyApp());
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
         "/login": (context) => Login(),
         "/items": (context) => Items(),
         "/item-details": (context) => ItemDetails(),
-        "/cart": (context) => Cart()
+        "/cart": (context) => Cart(),
+        "/payment": (context) => Payment()
       },
     );
   }

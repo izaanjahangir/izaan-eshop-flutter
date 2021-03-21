@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import "package:izaan_eshop/components/button/button.dart";
-import "package:izaan_eshop/screens/cart/cart_item.dart";
-import "package:izaan_eshop/screens/cart/cart_bill.dart";
 
-class Cart extends StatelessWidget {
+class Payment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,32 +22,16 @@ class Cart extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Cart",
+                        "Payment",
                         style: TextStyle(
                             fontSize: 26, fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      CartItem(),
-                      CartItem(),
-                      CartItem(),
-                      CartItem(),
-                      CartItem(),
-                      CartItem(),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      CartBill(),
-                      SizedBox(
-                        height: 30,
                       ),
                       Button(
                           color: Colors.black87,
                           textColor: Colors.white,
                           title: "Continue",
                           onPressed: () {
-                            Navigator.pushNamed(context, "/payment");
+                            // Navigator.pushNamed(context, "/cart");
                           })
                     ],
                   )),
