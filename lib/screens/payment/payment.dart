@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
 import "package:izaan_eshop/components/button/button.dart";
+import "package:izaan_eshop/screens/payment/add_card.dart";
 
 class Payment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    openModel() {
+      showModalBottomSheet<void>(
+        context: context,
+        builder: (BuildContext context) {
+          return AddCard();
+        },
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -30,9 +40,7 @@ class Payment extends StatelessWidget {
                           color: Colors.black87,
                           textColor: Colors.white,
                           title: "Continue",
-                          onPressed: () {
-                            // Navigator.pushNamed(context, "/cart");
-                          })
+                          onPressed: openModel),
                     ],
                   )),
             ],
