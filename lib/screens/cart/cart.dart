@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import "package:izaan_eshop/components/button/button.dart";
 import "package:izaan_eshop/screens/cart/cart_item.dart";
+import "package:izaan_eshop/screens/cart/cart_bill.dart";
 
 class Cart extends StatelessWidget {
   @override
@@ -12,12 +13,12 @@ class Cart extends StatelessWidget {
         elevation: 0,
       ),
       body: SafeArea(
-          child: Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              child: Container(
+          child: SingleChildScrollView(
+        child: Container(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
                   padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,33 +31,37 @@ class Cart extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      Expanded(
-                        child: ListView(
-                          scrollDirection: Axis.vertical,
-                          children: [
-                            CartItem(),
-                            CartItem(),
-                            CartItem(),
-                            CartItem(),
-                            CartItem(),
-                            CartItem(),
-                          ],
-                        ),
-                      )
+                      CartItem(),
+                      CartItem(),
+                      CartItem(),
+                      CartItem(),
+                      CartItem(),
+                      CartItem(),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      CartBill(),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      CartBillRow(
+                        label: "Sub total",
+                        amount: "100",
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Button(
+                          color: Colors.black87,
+                          textColor: Colors.white,
+                          title: "Continue",
+                          onPressed: () {
+                            // Navigator.pushNamed(context, "/cart");
+                          })
                     ],
                   )),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Button(
-                  color: Colors.black87,
-                  textColor: Colors.white,
-                  title: "Continue",
-                  onPressed: () {
-                    Navigator.pushNamed(context, "/cart");
-                  }),
-            )
-          ],
+            ],
+          ),
         ),
       )),
     );
