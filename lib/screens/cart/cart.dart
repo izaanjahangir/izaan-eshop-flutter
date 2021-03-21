@@ -42,13 +42,6 @@ class Cart extends StatelessWidget {
                       ),
                       CartBill(),
                       SizedBox(
-                        height: 5,
-                      ),
-                      CartBillRow(
-                        label: "Sub total",
-                        amount: "100",
-                      ),
-                      SizedBox(
                         height: 30,
                       ),
                       Button(

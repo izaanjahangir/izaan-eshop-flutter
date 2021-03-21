@@ -3,24 +3,35 @@ import 'package:flutter/material.dart';
 class CartBill extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          border: Border(
-              top: BorderSide(color: Colors.black26, width: 1),
-              bottom: BorderSide(color: Colors.black26, width: 1))),
-      padding: EdgeInsets.symmetric(vertical: 10),
-      child: Column(
-        children: [
-          CartBillRow(
-            label: "Sub total",
-            amount: "100",
+    return Column(
+      children: [
+        Container(
+          decoration: BoxDecoration(
+              border: Border(
+                  top: BorderSide(color: Colors.black26, width: 1),
+                  bottom: BorderSide(color: Colors.black26, width: 1))),
+          padding: EdgeInsets.symmetric(vertical: 10),
+          child: Column(
+            children: [
+              CartBillRow(
+                label: "Sub total",
+                amount: "100",
+              ),
+              CartBillRow(
+                label: "Discount",
+                amount: "0",
+              )
+            ],
           ),
-          CartBillRow(
-            label: "Discount",
-            amount: "0",
-          )
-        ],
-      ),
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        CartBillRow(
+          label: "Sub total",
+          amount: "100",
+        ),
+      ],
     );
   }
 }
