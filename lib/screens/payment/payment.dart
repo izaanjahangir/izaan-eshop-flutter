@@ -69,7 +69,7 @@ class Payment extends StatelessWidget {
               child: Button(
                   color: Colors.black87,
                   textColor: Colors.white,
-                  title: "Continue",
+                  title: "Pay (\$ 10.00)",
                   onPressed: openModel),
             ),
           ],
