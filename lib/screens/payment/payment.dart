@@ -6,10 +6,13 @@ class Payment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     openModel() {
+      final Widget addCardWidget = AddCard();
+
       showModalBottomSheet<void>(
+        isDismissible: false,
         context: context,
         builder: (BuildContext context) {
-          return AddCard();
+          return addCardWidget;
         },
       );
     }

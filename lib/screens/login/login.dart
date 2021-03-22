@@ -15,6 +15,8 @@ class _LoginState extends State<Login> {
     TextEditingController emailController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
 
+    print("build ran");
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,

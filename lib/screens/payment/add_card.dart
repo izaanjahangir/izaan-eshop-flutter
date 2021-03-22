@@ -1,14 +1,27 @@
 import 'package:flutter/material.dart';
 import "package:izaan_eshop/components/button/button.dart";
+import "package:izaan_eshop/components/date_input/date_input.dart";
 
-class AddCard extends StatelessWidget {
+class AddCard extends StatefulWidget {
+  @override
+  _AddCardState createState() => _AddCardState();
+}
+
+class _AddCardState extends State<AddCard> {
+  DateTime expiryDate;
+
+  onExpiryDate(selectedDate) {
+    setState(() {
+      expiryDate = selectedDate;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final _formKey = GlobalKey<FormState>();
 
     TextEditingController ccNumberController = TextEditingController();
     TextEditingController cvvController = TextEditingController();
-    TextEditingController expiryController = TextEditingController();
 
     return SingleChildScrollView(
       child: Container(
@@ -23,6 +36,7 @@ class AddCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     TextFormField(
+                      keyboardType: TextInputType.number,
                       controller: ccNumberController,
                       decoration: const InputDecoration(
                         hintText: 'Card number',
@@ -35,6 +49,7 @@ class AddCard extends StatelessWidget {
                       height: 10,
                     ),
                     TextFormField(
+                      keyboardType: TextInputType.number,
                       controller: cvvController,
                       decoration: const InputDecoration(
                         hintText: 'CVV',
@@ -46,14 +61,10 @@ class AddCard extends StatelessWidget {
                     SizedBox(
                       height: 10,
                     ),
-                    TextFormField(
-                      controller: expiryController,
-                      decoration: const InputDecoration(
-                        hintText: 'Expiry date',
-                      ),
-                      validator: (value) {
-                        return null;
-                      },
+                    DateInput(
+                      value: expiryDate,
+                      placeholder: "Expiry Date",
+                      onDateSelect: onExpiryDate,
                     ),
                     SizedBox(
                       height: 20,
@@ -66,7 +77,17 @@ class AddCard extends StatelessWidget {
                           // if (_formKey.currentState.validate()) {
                           //   Navigator.pushNamed(context, "/home");
                           // }
-                          Navigator.pushNamed(context, "/home");
+                          // Navigator.pushNamed(context, "/home");
+                        }),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Button(
+                        color: Colors.black87,
+                        textColor: Colors.white,
+                        title: "Cancel",
+                        onPressed: () {
+                          Navigator.pop(context);
                         })
                   ],
                 ),
