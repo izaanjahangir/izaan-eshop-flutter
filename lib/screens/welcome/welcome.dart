@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import "package:izaan_eshop/components/button/button.dart";
+import "package:izaan_eshop/config/theme_colors.dart";
 
 class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: SafeArea(
           child: SizedBox.expand(
         child: Container(
-          color: Colors.white,
+          color: ThemeColors.themeTransparent,
           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
           child: Column(
             children: [
@@ -18,10 +21,14 @@ class Welcome extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 24,
                     fontFamily: "RocknRollOne",
-                    color: Colors.grey[800]),
+                    color: ThemeColors.black),
               ),
               Expanded(
-                child: Container(),
+                child: Container(
+                    child: Image.asset(
+                  "assets/images/ecommerce.png",
+                  width: width * 0.9,
+                )),
               ),
               Button(
                 title: "Log in",
