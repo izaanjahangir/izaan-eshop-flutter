@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import "package:izaan_eshop/components/button/button.dart";
 import "package:izaan_eshop/screens/payment/add_card.dart";
+import "package:izaan_eshop/screens/payment/card_item.dart";
 
 class Payment extends StatelessWidget {
   @override
@@ -24,30 +25,54 @@ class Payment extends StatelessWidget {
         elevation: 0,
       ),
       body: SafeArea(
-          child: SingleChildScrollView(
-        child: Container(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              padding: const EdgeInsets.only(bottom: 10),
+              child: Text(
+                "Payment",
+                style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+              ),
+            ),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Container(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        "Payment",
-                        style: TextStyle(
-                            fontSize: 26, fontWeight: FontWeight.bold),
-                      ),
-                      Button(
-                          color: Colors.black87,
-                          textColor: Colors.white,
-                          title: "Continue",
-                          onPressed: openModel),
+                      Container(
+                          child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          CardItem(),
+                          CardItem(),
+                        ],
+                      )),
                     ],
-                  )),
-            ],
-          ),
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.only(top: 10),
+              child: Button(
+                  color: Colors.black87,
+                  textColor: Colors.white,
+                  title: "Add Card",
+                  onPressed: openModel),
+            ),
+            Container(
+              padding: const EdgeInsets.only(top: 10),
+              child: Button(
+                  color: Colors.black87,
+                  textColor: Colors.white,
+                  title: "Continue",
+                  onPressed: openModel),
+            ),
+          ],
         ),
       )),
     );
